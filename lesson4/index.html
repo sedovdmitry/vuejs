@@ -3,17 +3,22 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Vue 4 Переходы</title>
-	<link rel="stylesheet" src="style.css" />
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="style.css" />
 
 </head>
 <body>
 	<div id="app">
 
 		<header>
-			<button @click="show = !show">Change</button>
+			<button @click="show = !show">
+				<i class="ion-navicon"></i>
+			</button>
 		</header>
-		<aside class="box" v-if="show"></aside>
-		<div v-else>Пусто</div>
+		<transition name="slide">
+			<aside v-if="show"></aside>
+		</transition>
+
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>

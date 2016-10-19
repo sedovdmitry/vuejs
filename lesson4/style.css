@@ -54,10 +54,10 @@ button:active {
     background-color: rgba(0,0,0,0.1);
 }
 
-.slide-transition {
+.slide-enter-active, .slide-leave-active {
     transition: all .3s cubic-bezier(.65, .05, .36, 1);
 }
 
-.slide-enter, .slide-leave {
+.slide-enter, .slide-leave-active {
     left: -100%;
 }﻿
