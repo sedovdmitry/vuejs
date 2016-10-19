@@ -1,1 +1,1 @@
-#Vue JS
+#Vue.JS 2
