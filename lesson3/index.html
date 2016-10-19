@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>VueJs 3</title>
+
+</head>
+<body>
+	<div id="app">
+		<form action="">
+			<button v-on:click.prevent="onClick">Кнопка</button>
+		</form>
+		<input type="text" v-model="message" @keyup.13="onClick" />
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+	<script>
+
+		new Vue({
+			el: "#app",
+			data: {
+				message: ''
+			},
+			methods : {
+				onClick: function() {
+					console.log(this.message);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

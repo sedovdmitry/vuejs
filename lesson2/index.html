@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>VueJs 1</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="bear in bears" :class="{ 'strike': bear.status }" @click="bear.status = !bear.status">{{bear.name}}</li>
+		</ul>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+	<script>
+
+		new Vue({
+			el: "#app",
+			data: {
+				bears: [
+					{
+						name: 'гризли',
+						status: false
+					},
+					{
+						name: 'белый',
+						status: false
+					},
+					{
+						name: 'панда',
+						status: true
+					},
+					{
+						name: 'губач',
+						status: false
+					},
+				]
+			}
+		})
+	</script>
+</body>
+</html>
